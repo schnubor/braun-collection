@@ -1,26 +1,127 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --braun-red: #E3000B;
+  --braun-black: #0A0A0A;
+  --braun-white: #F5F4F0;
+  --braun-warm-grey: #E8E6E1;
+  --braun-mid-grey: #6B6762;  /* 5.0:1 on --braun-white */
+  --braun-dark-grey: #3A3835; /* 9.5:1 on --braun-white */
+  --braun-rule: #9C9891;      /* 3.5:1 — used only for decorative/non-text */
+
+  --font-body: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: "DM Mono", "Courier New", monospace;
+
+  --max-width: 1400px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--braun-white);
+  color: var(--braun-black);
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+::selection {
+  background: var(--braun-red);
+  color: var(--braun-white);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-up {
+  opacity: 0;
+  animation: fadeUp 500ms ease forwards;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 600ms ease forwards;
+}
+
+/* ── Responsive ─────────────────────────────────── */
+
+@media (max-width: 1024px) {
+  .page-section {
+    padding-left: 32px !important;
+    padding-right: 32px !important;
+  }
+  .nav-inner {
+    padding: 0 32px !important;
+  }
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .detail-content-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .detail-image-col {
+    padding-right: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  .detail-info-col {
+    padding-left: 0 !important;
+    padding-top: 40px !important;
+  }
+  .detail-header-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-section {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+  .nav-inner {
+    padding: 0 24px !important;
+  }
+  .card-grid {
+    grid-template-columns: 1fr !important;
+    gap: 48px 0 !important;
+  }
+  .hero-section {
+    padding-top: 48px !important;
+    padding-bottom: 40px !important;
+  }
+  .breadcrumb {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+  .principles-inner {
+    gap: 32px !important;
+  }
+  footer {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
 }
