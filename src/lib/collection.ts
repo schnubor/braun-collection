@@ -1,4 +1,4 @@
-export type Category = "audio" | "radio" | "shaver" | "kitchen" | "calculator" | "lighter" | "projector" | "camera" | "haircare" | "clock" | "charger";
+export type Category = "audio" | "radio" | "shaver" | "kitchen" | "calculator" | "lighter" | "projector" | "camera" | "haircare" | "clock" | "charger" | "fan";
 
 export interface DeviceSpec {
   label: string;
@@ -43,7 +43,7 @@ export const collection: Device[] = [
       { label: "Weight", value: "12.5 kg" },
       { label: "Finish", value: "Anodised aluminium, black lacquer" },
     ],
-    images: ["/images/audio-300/01.jpg", "/images/audio-300/02.jpg"],
+    images: ["/audio-300/1.webp", "/audio-300/2.webp", "/audio-300/3.webp"],
     featured: true,
   },
   {
@@ -67,7 +67,7 @@ export const collection: Device[] = [
       { label: "Weight", value: "3.2 kg" },
       { label: "Finish", value: "Textured black plastic, chrome trim" },
     ],
-    images: ["/images/t1000cd/01.jpg", "/images/t1000cd/02.jpg"],
+    images: ["/t1000cd/1.webp", "/t1000cd/2.webp", "/t1000cd/3.webp"],
     featured: true,
   },
   {
@@ -91,7 +91,7 @@ export const collection: Device[] = [
       { label: "Weight", value: "68 g" },
       { label: "Finish", value: "Brushed aluminium" },
     ],
-    images: ["/images/f1-mactron/01.jpg", "/images/f1-mactron/02.jpg"],
+    images: ["/f1-mactron/1.webp", "/f1-mactron/2.webp", "/f1-mactron/3.webp"],
     featured: true,
   },
   {
@@ -116,30 +116,30 @@ export const collection: Device[] = [
       { label: "Weight", value: "710 g" },
       { label: "Finish", value: "Black anodised aluminium" },
     ],
-    images: ["/images/nizo-s560/01.jpg", "/images/nizo-s560/02.jpg"],
+    images: ["/nizo-s560/1.webp", "/nizo-s560/2.webp", "/nizo-s560/3.webp"],
   },
   {
     id: "hl70",
     name: "HL 70",
     model: "HL 70",
     year: 1970,
-    category: "haircare",
+    category: "fan",
     designer: "Dieter Rams",
     acquired: "2022-04-09",
     acquiredFrom: "Vintage market, Hamburg",
     condition: "good",
     description:
-      "The Braun HL 70 hair dryer is a landmark in domestic product design. Where competitors offered decorative shells, Rams proposed a tool — a pure cylinder of white ABS with a single speed switch. Its form follows airflow and function with an honesty that remains striking more than fifty years on.",
+      "The Braun HL 70 is a desk fan of characteristic restraint. A white ABS cylinder, a single rotary speed control, and a chrome grille — nothing more. Where competitors offered decorative shells, Rams proposed a tool whose form follows airflow with complete honesty. It sits on any surface as though it could not be otherwise.",
     specs: [
-      { label: "Type", value: "Hair Dryer" },
+      { label: "Type", value: "Desk Fan" },
       { label: "Year", value: "1970" },
-      { label: "Power", value: "600 W" },
+      { label: "Speeds", value: "3" },
       { label: "Voltage", value: "220 V" },
       { label: "Material", value: "ABS plastic" },
       { label: "Dimensions", value: "280 × 80 × 80 mm" },
-      { label: "Finish", value: "White ABS, chrome ring" },
+      { label: "Finish", value: "White ABS, chrome grille" },
     ],
-    images: ["/images/hl70/01.jpg", "/images/hl70/02.jpg"],
+    images: ["/hl70/1.webp", "/hl70/2.webp", "/hl70/3.webp"],
   },
   {
     id: "domino",
@@ -162,7 +162,7 @@ export const collection: Device[] = [
       { label: "Weight", value: "95 g" },
       { label: "Finish", value: "White lacquer" },
     ],
-    images: ["/images/domino/01.jpg", "/images/domino/02.jpg"],
+    images: ["/domino/1.webp", "/domino/2.webp", "/domino/3.webp"],
   },
   {
     id: "mach2",
@@ -185,7 +185,7 @@ export const collection: Device[] = [
       { label: "Weight", value: "42 g" },
       { label: "Finish", value: "Brushed aluminium" },
     ],
-    images: ["/images/mach2/01.jpg", "/images/mach2/02.jpg"],
+    images: ["/mach2/1.webp", "/mach2/2.webp", "/mach2/3.webp"],
   },
   {
     id: "sixtant-sm31",
@@ -208,12 +208,12 @@ export const collection: Device[] = [
       { label: "Dimensions", value: "140 × 48 × 32 mm" },
       { label: "Finish", value: "Chrome-plated steel, black ABS" },
     ],
-    images: ["/images/sixtant-sm31/01.jpg", "/images/sixtant-sm31/02.jpg"],
+    images: ["/sixtant-sm31/1.webp", "/sixtant-sm31/2.webp", "/sixtant-sm31/3.webp"],
   },
   {
-    id: "l02",
-    name: "L 02",
-    model: "L 02",
+    id: "le02",
+    name: "LE 02",
+    model: "LE 02",
     year: 1958,
     category: "audio",
     designer: "Dieter Rams",
@@ -221,7 +221,7 @@ export const collection: Device[] = [
     acquiredFrom: "Antique dealer, Frankfurt",
     condition: "excellent",
     description:
-      "The Braun L 02 speaker is one of Dieter Rams' earliest and most celebrated designs — a wall-mounted loudspeaker of radical simplicity. A stretched fabric face, an aluminium frame, and a single mounting point. It strips the speaker back to its acoustic essence, treating the wall itself as part of the composition.",
+      "The Braun LE 02 is one of Dieter Rams' earliest and most celebrated designs — a wall-mounted loudspeaker of radical simplicity. A stretched fabric face, an aluminium frame, and a single mounting point. It strips the speaker back to its acoustic essence, treating the wall itself as part of the composition.",
     specs: [
       { label: "Type", value: "Wall-mounted Loudspeaker" },
       { label: "Year", value: "1958" },
@@ -231,8 +231,31 @@ export const collection: Device[] = [
       { label: "Material", value: "Aluminium frame, acoustic fabric" },
       { label: "Finish", value: "Anodised aluminium, grey fabric" },
     ],
-    images: ["/images/l02/01.jpg", "/images/l02/02.jpg"],
+    images: ["/le02/1.webp", "/le02/2.webp", "/le02/3.webp"],
     featured: true,
+  },
+  {
+    id: "le03",
+    name: "LE 03",
+    model: "LE 03",
+    year: 1960,
+    category: "audio",
+    designer: "Dieter Rams",
+    acquired: "2023-04-11",
+    acquiredFrom: "Antique dealer, Frankfurt",
+    condition: "excellent",
+    description:
+      "The Braun LE 03 is a compact bookshelf loudspeaker that carries forward the formal language of the LE 02 into a freestanding format. Its proportions are precisely considered — a white-lacquered cabinet, an acoustic fabric face, and nothing else. Placed on a shelf or stand, it disappears into its surroundings, present only as sound.",
+    specs: [
+      { label: "Type", value: "Bookshelf Loudspeaker" },
+      { label: "Year", value: "1960" },
+      { label: "Impedance", value: "8 Ω" },
+      { label: "Power", value: "15 W (max)" },
+      { label: "Dimensions", value: "340 × 210 × 180 mm" },
+      { label: "Material", value: "Lacquered MDF, acoustic fabric" },
+      { label: "Finish", value: "White lacquer, grey fabric" },
+    ],
+    images: ["/le03/1.webp", "/le03/2.webp", "/le03/3.webp"],
   },
   {
     id: "l420",
@@ -255,7 +278,7 @@ export const collection: Device[] = [
       { label: "Dimensions", value: "960 × 240 × 280 mm" },
       { label: "Finish", value: "White lacquer, grey acoustic fabric" },
     ],
-    images: ["/images/l420/01.jpg", "/images/l420/02.jpg"],
+    images: ["/l420/1.webp", "/l420/2.webp", "/l420/3.webp"],
   },
   {
     id: "fp30",
@@ -278,7 +301,7 @@ export const collection: Device[] = [
       { label: "Dimensions", value: "310 × 190 × 140 mm" },
       { label: "Finish", value: "Black ABS plastic" },
     ],
-    images: ["/images/fp30/01.jpg", "/images/fp30/02.jpg"],
+    images: ["/fp30/1.webp", "/fp30/2.webp", "/fp30/3.webp"],
   },
   {
     id: "phase2",
@@ -301,7 +324,7 @@ export const collection: Device[] = [
       { label: "Power", value: "1 × AA battery" },
       { label: "Finish", value: "White ABS, black hands" },
     ],
-    images: ["/images/phase2/01.jpg", "/images/phase2/02.jpg"],
+    images: ["/phase2/1.webp", "/phase2/2.webp", "/phase2/3.webp"],
   },
   {
     id: "ukw1",
@@ -324,7 +347,7 @@ export const collection: Device[] = [
       { label: "Dimensions", value: "220 × 200 × 120 mm" },
       { label: "Finish", value: "White lacquered steel" },
     ],
-    images: ["/images/ukw1/01.jpg", "/images/ukw1/02.jpg"],
+    images: ["/ukw1/1.webp", "/ukw1/2.webp", "/ukw1/3.webp"],
     featured: true,
   },
   {
@@ -348,7 +371,7 @@ export const collection: Device[] = [
       { label: "Dimensions", value: "75 × 65 × 18 mm (open)" },
       { label: "Finish", value: "White ABS plastic" },
     ],
-    images: ["/images/abk30/01.jpg", "/images/abk30/02.jpg"],
+    images: ["/abk30/1.webp", "/abk30/2.webp", "/abk30/3.webp"],
   },
   {
     id: "ab1",
@@ -372,7 +395,7 @@ export const collection: Device[] = [
       { label: "Depth", value: "55 mm" },
       { label: "Finish", value: "White ABS plastic" },
     ],
-    images: ["/images/ab1/01.jpg", "/images/ab1/02.jpg"],
+    images: ["/ab1/1.webp", "/ab1/2.webp", "/ab1/3.webp"],
     featured: true,
   },
   {
@@ -396,7 +419,7 @@ export const collection: Device[] = [
       { label: "Diameter", value: "100 mm" },
       { label: "Finish", value: "White ABS plastic" },
     ],
-    images: ["/images/bwc02m/01.jpg", "/images/bwc02m/02.jpg"],
+    images: ["/bwc02m/1.webp", "/bwc02m/2.webp", "/bwc02m/3.webp"],
   },
   {
     id: "xt3",
@@ -419,7 +442,7 @@ export const collection: Device[] = [
       { label: "Charge Time", value: "1 hour" },
       { label: "Finish", value: "Signal yellow ABS" },
     ],
-    images: ["/images/xt3/01.jpg", "/images/xt3/02.jpg"],
+    images: ["/xt3/1.webp", "/xt3/2.webp", "/xt3/3.webp"],
   },
   {
     id: "m1010",
@@ -442,7 +465,7 @@ export const collection: Device[] = [
       { label: "Weight", value: "145 g" },
       { label: "Finish", value: "White ABS, black foil head" },
     ],
-    images: ["/images/m1010/01.jpg", "/images/m1010/02.jpg"],
+    images: ["/m1010/1.webp", "/m1010/2.webp", "/m1010/3.webp"],
   },
 ];
 

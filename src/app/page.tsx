@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Nav from "@/components/Nav";
+import DeviceImage from "@/components/DeviceImage";
 import { collection, type Device } from "@/lib/collection";
 
 const categoryLabels: Record<string, string> = {
@@ -14,6 +15,7 @@ const categoryLabels: Record<string, string> = {
     haircare: "Hair Care",
     clock: "Clock",
     charger: "Charger",
+    fan: "Fan",
 };
 
 function DeviceCard({ device, index }: { device: Device; index: number }) {
@@ -44,27 +46,14 @@ function DeviceCard({ device, index }: { device: Device; index: number }) {
                         transition: "opacity 220ms ease",
                     }}
                 >
-                    <div
-                        style={{
-                            position: "absolute",
-                            inset: 0,
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                        }}
-                    >
-                        <span
-                            style={{
-                                fontFamily: "var(--font-dm-mono), monospace",
-                                fontSize: 11,
-                                letterSpacing: "0.12em",
-                                textTransform: "uppercase",
-                                color: "var(--braun-mid-grey)",
-                            }}
-                        >
-                            {device.model}
-                        </span>
-                    </div>
+                    <DeviceImage
+                        src={device.images[0]}
+                        alt={device.name}
+                        fill
+                        fit="cover"
+                        priority={false}
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
 
                     <div
                         style={{

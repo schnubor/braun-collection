@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Nav from "@/components/Nav";
+import DeviceGallery from "@/components/DeviceGallery";
 import { collection, getDevice, conditionLabel, formatAcquired } from "@/lib/collection";
 
 export function generateStaticParams() {
@@ -19,6 +20,7 @@ const categoryLabels: Record<string, string> = {
   haircare: "Hair Care",
   clock: "Clock",
   charger: "Charger",
+  fan: "Fan",
 };
 
 const conditionDots: Record<string, number> = {
@@ -104,110 +106,34 @@ export default async function DevicePage({
             padding: "64px 48px 56px",
           }}
         >
-          <div
-            className="detail-header-grid"
-            style={{
-              display: "grid",
-              gridTemplateColumns: "2fr 1fr",
-              alignItems: "end",
-              gap: 48,
-            }}
-          >
-            <div className="fade-up">
-              <div
-                style={{
-                  fontFamily: "var(--font-dm-mono), monospace",
-                  fontSize: 10,
-                  letterSpacing: "0.14em",
-                  textTransform: "uppercase",
-                  color: "var(--braun-mid-grey)",
-                  marginBottom: 20,
-                  display: "flex",
-                  gap: 24,
-                }}
-              >
-                <span>{categoryLabels[device.category]}</span>
-                <span style={{ color: "var(--braun-rule)" }}>·</span>
-                <span>{device.year}</span>
-              </div>
-              <h1
-                style={{
-                  fontSize: "clamp(40px, 6vw, 88px)",
-                  fontWeight: 400,
-                  letterSpacing: "-0.04em",
-                  lineHeight: 0.95,
-                  color: "var(--braun-black)",
-                }}
-              >
-                {device.name}
-              </h1>
+          <div className="fade-up">
+            <div
+              style={{
+                fontFamily: "var(--font-dm-mono), monospace",
+                fontSize: 10,
+                letterSpacing: "0.14em",
+                textTransform: "uppercase",
+                color: "var(--braun-mid-grey)",
+                marginBottom: 20,
+                display: "flex",
+                gap: 24,
+              }}
+            >
+              <span>{categoryLabels[device.category]}</span>
+              <span style={{ color: "var(--braun-rule)" }}>·</span>
+              <span>{device.year}</span>
             </div>
-
-            <div className="fade-up" style={{ animationDelay: "100ms" }}>
-              {/* Condition indicator */}
-              <div style={{ marginBottom: 24 }}>
-                <div
-                  style={{
-                    fontFamily: "var(--font-dm-mono), monospace",
-                    fontSize: 10,
-                    letterSpacing: "0.12em",
-                    textTransform: "uppercase",
-                    color: "var(--braun-mid-grey)",
-                    marginBottom: 10,
-                  }}
-                >
-                  Condition
-                </div>
-                <div style={{ display: "flex", gap: 5, alignItems: "center", marginBottom: 8 }}>
-                  {[1, 2, 3, 4, 5].map((i) => (
-                    <div
-                      key={i}
-                      style={{
-                        width: 28,
-                        height: 3,
-                        backgroundColor: i <= dots ? "var(--braun-black)" : "var(--braun-rule)",
-                        transition: "background-color 200ms ease",
-                      }}
-                    />
-                  ))}
-                </div>
-                <div
-                  style={{
-                    fontFamily: "var(--font-dm-mono), monospace",
-                    fontSize: 11,
-                    letterSpacing: "0.08em",
-                    color: "var(--braun-dark-grey)",
-                  }}
-                >
-                  {conditionLabel(device.condition)}
-                </div>
-              </div>
-
-              {/* Designer */}
-              <div>
-                <div
-                  style={{
-                    fontFamily: "var(--font-dm-mono), monospace",
-                    fontSize: 10,
-                    letterSpacing: "0.12em",
-                    textTransform: "uppercase",
-                    color: "var(--braun-mid-grey)",
-                    marginBottom: 6,
-                  }}
-                >
-                  Designer
-                </div>
-                <div
-                  style={{
-                    fontSize: 15,
-                    fontWeight: 400,
-                    color: "var(--braun-black)",
-                  }}
-                >
-                  {device.designer}
-                </div>
-              </div>
-            </div>
+            <h1
+              style={{
+                fontSize: "clamp(40px, 6vw, 88px)",
+                fontWeight: 400,
+                letterSpacing: "-0.04em",
+                lineHeight: 0.95,
+                color: "var(--braun-black)",
+              }}
+            >
+              {device.name}
+            </h1>
           </div>
         </section>
 
@@ -237,77 +163,7 @@ export default async function DevicePage({
                 paddingRight: 64,
               }}
             >
-              {/* Primary image placeholder */}
-              <div
-                className="fade-in"
-                style={{
-                  width: "100%",
-                  aspectRatio: "4/3",
-                  backgroundColor: "var(--braun-warm-grey)",
-                  position: "relative",
-                  marginBottom: 16,
-                  animationDelay: "80ms",
-                }}
-              >
-                <div
-                  style={{
-                    position: "absolute",
-                    inset: 0,
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    gap: 8,
-                  }}
-                >
-                  <div
-                    style={{
-                      width: 40,
-                      height: 40,
-                      border: "1px solid var(--braun-rule)",
-                      borderRadius: "50%",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                    }}
-                  >
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                      <path
-                        d="M8 3v10M3 8h10"
-                        stroke="var(--braun-rule)"
-                        strokeWidth="1"
-                        strokeLinecap="round"
-                      />
-                    </svg>
-                  </div>
-                  <span
-                    style={{
-                      fontFamily: "var(--font-dm-mono), monospace",
-                      fontSize: 10,
-                      letterSpacing: "0.1em",
-                      textTransform: "uppercase",
-                      color: "var(--braun-rule)",
-                    }}
-                  >
-                    Add photograph
-                  </span>
-                </div>
-              </div>
-
-              {/* Thumbnail row */}
-              <div style={{ display: "flex", gap: 8 }}>
-                {[1, 2, 3].map((i) => (
-                  <div
-                    key={i}
-                    style={{
-                      flex: 1,
-                      aspectRatio: "1/1",
-                      backgroundColor: i === 1 ? "var(--braun-warm-grey)" : "transparent",
-                      border: "1px solid var(--braun-rule)",
-                    }}
-                  />
-                ))}
-              </div>
+              <DeviceGallery images={device.images} name={device.name} />
             </div>
 
             {/* Right: Info */}
@@ -322,6 +178,76 @@ export default async function DevicePage({
                 gap: 0,
               }}
             >
+              {/* Condition + Designer */}
+              <div
+                className="fade-up"
+                style={{ marginBottom: 48, animationDelay: "100ms", display: "flex", gap: 48 }}
+              >
+                {/* Condition indicator */}
+                <div>
+                  <div
+                    style={{
+                      fontFamily: "var(--font-dm-mono), monospace",
+                      fontSize: 10,
+                      letterSpacing: "0.12em",
+                      textTransform: "uppercase",
+                      color: "var(--braun-mid-grey)",
+                      marginBottom: 10,
+                    }}
+                  >
+                    Condition
+                  </div>
+                  <div style={{ display: "flex", gap: 5, alignItems: "center", marginBottom: 8 }}>
+                    {[1, 2, 3, 4, 5].map((i) => (
+                      <div
+                        key={i}
+                        style={{
+                          width: 28,
+                          height: 3,
+                          backgroundColor: i <= dots ? "var(--braun-black)" : "var(--braun-rule)",
+                          transition: "background-color 200ms ease",
+                        }}
+                      />
+                    ))}
+                  </div>
+                  <div
+                    style={{
+                      fontFamily: "var(--font-dm-mono), monospace",
+                      fontSize: 11,
+                      letterSpacing: "0.08em",
+                      color: "var(--braun-dark-grey)",
+                    }}
+                  >
+                    {conditionLabel(device.condition)}
+                  </div>
+                </div>
+
+                {/* Designer */}
+                <div>
+                  <div
+                    style={{
+                      fontFamily: "var(--font-dm-mono), monospace",
+                      fontSize: 10,
+                      letterSpacing: "0.12em",
+                      textTransform: "uppercase",
+                      color: "var(--braun-mid-grey)",
+                      marginBottom: 6,
+                    }}
+                  >
+                    Designer
+                  </div>
+                  <div
+                    style={{
+                      fontSize: 15,
+                      fontWeight: 400,
+                      color: "var(--braun-black)",
+                    }}
+                  >
+                    {device.designer}
+                  </div>
+                </div>
+              </div>
+
               {/* Description */}
               <div
                 className="fade-up"
@@ -475,71 +401,6 @@ export default async function DevicePage({
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* Principles strip */}
-        <section
-          style={{
-            backgroundColor: "var(--braun-warm-grey)",
-            padding: "40px 48px",
-          }}
-        >
-          <div
-            className="principles-inner"
-            style={{
-              maxWidth: "var(--max-width)",
-              margin: "0 auto",
-              display: "flex",
-              gap: 48,
-              overflowX: "auto",
-            }}
-          >
-            {[
-              "Innovative",
-              "Useful",
-              "Aesthetic",
-              "Understandable",
-              "Unobtrusive",
-              "Honest",
-              "Durable",
-              "Thorough",
-              "Eco-friendly",
-              "As little as possible",
-            ].map((principle, i) => (
-              <div
-                key={principle}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 12,
-                  flexShrink: 0,
-                }}
-              >
-                <span
-                  style={{
-                    fontFamily: "var(--font-dm-mono), monospace",
-                    fontSize: 9,
-                    letterSpacing: "0.1em",
-                    color: "var(--braun-rule)",
-                  }}
-                >
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <span
-                  style={{
-                    fontFamily: "var(--font-dm-mono), monospace",
-                    fontSize: 10,
-                    letterSpacing: "0.1em",
-                    textTransform: "uppercase",
-                    color: "var(--braun-dark-grey)",
-                    whiteSpace: "nowrap",
-                  }}
-                >
-                  {principle}
-                </span>
-              </div>
-            ))}
           </div>
         </section>
 
