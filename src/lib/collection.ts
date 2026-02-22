@@ -281,9 +281,9 @@ export const collection: Device[] = [
     images: ["/l420/1.webp", "/l420/2.webp", "/l420/3.webp"],
   },
   {
-    id: "fp30",
-    name: "FP 30",
-    model: "FP 30",
+    id: "fp5",
+    name: "FP 5",
+    model: "FP 5",
     year: 1973,
     category: "projector",
     designer: "Dieter Rams",
@@ -291,7 +291,7 @@ export const collection: Device[] = [
     acquiredFrom: "Flea market, Cologne",
     condition: "good",
     description:
-      "The Braun FP 30 is a Super 8 film projector of characteristic restraint. Its compact black housing conceals a precise optical system behind a face reduced to the absolute essentials — a lens, a slot, a single control. The FP 30 treats projection as a quiet, domestic act, the machine receding so that the image may speak.",
+      "The Braun FP 5 is a Super 8 film projector of characteristic restraint. Its compact black housing conceals a precise optical system behind a face reduced to the absolute essentials — a lens, a slot, a single control. The FP 5 treats projection as a quiet, domestic act, the machine receding so that the image may speak.",
     specs: [
       { label: "Type", value: "Super 8 Film Projector" },
       { label: "Year", value: "1973" },
@@ -301,7 +301,7 @@ export const collection: Device[] = [
       { label: "Dimensions", value: "310 × 190 × 140 mm" },
       { label: "Finish", value: "Black ABS plastic" },
     ],
-    images: ["/fp30/1.webp", "/fp30/2.webp", "/fp30/3.webp"],
+    images: ["/fp5/1.webp", "/fp5/2.webp", "/fp5/3.webp"],
   },
   {
     id: "phase2",
