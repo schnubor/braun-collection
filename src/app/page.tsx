@@ -148,7 +148,7 @@ export default function HomePage() {
                         >
                             My personal collection of Braun objects, assembled
                             over the years out of a deep admiration for the work
-                            of Dieter Rams. Around 15 pieces — each chosen for
+                            of Dieter Rams. {collection.length} pieces — each chosen for
                             its honesty of form and the clarity of its purpose.
                         </p>
 
@@ -191,7 +191,7 @@ export default function HomePage() {
                                         marginBottom: 6,
                                     }}
                                 >
-                                    1955 – 1979
+                                    {Math.min(...collection.map(d => d.year))} – {Math.max(...collection.map(d => d.year))}
                                 </div>
                                 <div
                                     style={{
@@ -258,7 +258,7 @@ export default function HomePage() {
                             color: "var(--braun-mid-grey)",
                         }}
                     >
-                        Personal Braun Collection
+                        Collection Korndörfer
                     </span>
                     <span
                         style={{

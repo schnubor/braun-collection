@@ -424,7 +424,7 @@ export default async function DevicePage({
               color: "var(--braun-mid-grey)",
             }}
           >
-            Personal Braun Collection
+            Collection Korndörfer
           </span>
           <span
             style={{
