@@ -148,8 +148,9 @@ export default function HomePage() {
                         >
                             My personal collection of Braun objects, assembled
                             over the years out of a deep admiration for the work
-                            of Dieter Rams. {collection.length} pieces — each chosen for
-                            its honesty of form and the clarity of its purpose.
+                            of the Braun Design. {collection.length} pieces —
+                            each chosen for its honesty of form and the clarity
+                            of its purpose.
                         </p>
 
                         <div style={{ display: "flex", gap: 40 }}>
@@ -191,7 +192,9 @@ export default function HomePage() {
                                         marginBottom: 6,
                                     }}
                                 >
-                                    {Math.min(...collection.map(d => d.year))} – {Math.max(...collection.map(d => d.year))}
+                                    {Math.min(...collection.map((d) => d.year))}{" "}
+                                    –{" "}
+                                    {Math.max(...collection.map((d) => d.year))}
                                 </div>
                                 <div
                                     style={{
