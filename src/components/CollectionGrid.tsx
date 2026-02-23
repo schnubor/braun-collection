@@ -190,8 +190,8 @@ export default function CollectionGrid() {
 
             <style>{`
         a:hover .card-image { opacity: 0.82; }
-        a:hover .card-name { color: var(--braun-dark-grey); }
-        select:hover { border-color: var(--braun-dark-grey) !important; }
+        a:hover .card-name { color: var(--braun-mid-grey); }
+        select:hover { border-color: var(--braun-mid-grey) !important; }
       `}</style>
         </>
     );

@@ -215,7 +215,7 @@ export default async function DevicePage({
                       fontFamily: "var(--font-dm-mono), monospace",
                       fontSize: 11,
                       letterSpacing: "0.08em",
-                      color: "var(--braun-dark-grey)",
+                      color: "var(--braun-black)",
                     }}
                   >
                     {conditionLabel(device.condition)}
@@ -270,7 +270,7 @@ export default async function DevicePage({
                     fontSize: 15,
                     fontWeight: 400,
                     lineHeight: 1.75,
-                    color: "var(--braun-dark-grey)",
+                    color: "var(--braun-black)",
                   }}
                 >
                   {device.description}
@@ -284,18 +284,6 @@ export default async function DevicePage({
               >
                 <div
                   style={{
-                    fontFamily: "var(--font-dm-mono), monospace",
-                    fontSize: 10,
-                    letterSpacing: "0.12em",
-                    textTransform: "uppercase",
-                    color: "var(--braun-mid-grey)",
-                    marginBottom: 16,
-                  }}
-                >
-                  Provenance
-                </div>
-                <div
-                  style={{
                     display: "grid",
                     gridTemplateColumns: "1fr 1fr",
                     gap: "16px 24px",
@@ -306,9 +294,9 @@ export default async function DevicePage({
                       style={{
                         fontFamily: "var(--font-dm-mono), monospace",
                         fontSize: 10,
-                        letterSpacing: "0.08em",
-                        color: "var(--braun-rule)",
-                        marginBottom: 4,
+                        letterSpacing: "0.12em",
+                        color: "var(--braun-mid-grey)",
+                        marginBottom: 6,
                         textTransform: "uppercase",
                       }}
                     >
@@ -318,7 +306,7 @@ export default async function DevicePage({
                       style={{
                         fontSize: 14,
                         fontWeight: 400,
-                        color: "var(--braun-dark-grey)",
+                        color: "var(--braun-black)",
                       }}
                     >
                       {formatAcquired(device.acquired)}
@@ -329,9 +317,9 @@ export default async function DevicePage({
                       style={{
                         fontFamily: "var(--font-dm-mono), monospace",
                         fontSize: 10,
-                        letterSpacing: "0.08em",
-                        color: "var(--braun-rule)",
-                        marginBottom: 4,
+                        letterSpacing: "0.12em",
+                        color: "var(--braun-mid-grey)",
+                        marginBottom: 6,
                         textTransform: "uppercase",
                       }}
                     >
@@ -341,7 +329,7 @@ export default async function DevicePage({
                       style={{
                         fontSize: 14,
                         fontWeight: 400,
-                        color: "var(--braun-dark-grey)",
+                        color: "var(--braun-black)",
                       }}
                     >
                       {device.acquiredFrom}
@@ -391,7 +379,7 @@ export default async function DevicePage({
                         style={{
                           fontSize: 14,
                           fontWeight: 400,
-                          color: "var(--braun-dark-grey)",
+                          color: "var(--braun-black)",
                         }}
                       >
                         {spec.value}
@@ -424,7 +412,7 @@ export default async function DevicePage({
               color: "var(--braun-mid-grey)",
             }}
           >
-            Collection Korndörfer
+            Christian Korndörfer
           </span>
           <span
             style={{

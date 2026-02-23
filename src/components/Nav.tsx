@@ -1,13 +1,7 @@
-"use client";
-
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import BraunLogo from "./BraunLogo";
 
 export default function Nav() {
-  const pathname = usePathname();
-  const isHome = pathname === "/";
-
   return (
     <header
       style={{
@@ -35,23 +29,18 @@ export default function Nav() {
           <BraunLogo height={22} />
         </Link>
 
-        <nav>
-          <Link
-            href="/"
-            style={{
-              fontFamily: "var(--font-dm-mono), monospace",
-              fontSize: 10,
-              letterSpacing: "0.12em",
-              textTransform: "uppercase",
-              textDecoration: "none",
-              color: isHome ? "var(--braun-black)" : "var(--braun-mid-grey)",
-              fontWeight: isHome ? 500 : 400,
-              transition: "color 180ms ease",
-            }}
-          >
-            Personal Collection
-          </Link>
-        </nav>
+        <span
+          style={{
+            fontFamily: "var(--font-dm-mono), monospace",
+            fontSize: 10,
+            letterSpacing: "0.12em",
+            textTransform: "uppercase",
+            color: "var(--braun-black)",
+            fontWeight: 500,
+          }}
+        >
+          Personal Collection
+        </span>
       </div>
     </header>
   );

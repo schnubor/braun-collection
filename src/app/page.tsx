@@ -23,7 +23,7 @@ export default function HomePage() {
                                 fontSize: 15,
                                 fontWeight: 400,
                                 lineHeight: 1.75,
-                                color: "var(--braun-dark-grey)",
+                                color: "var(--braun-mid-grey)",
                                 marginBottom: 40,
                             }}
                         >
@@ -126,7 +126,7 @@ export default function HomePage() {
                             color: "var(--braun-mid-grey)",
                         }}
                     >
-                        Collection Korndörfer
+                        Christian Korndörfer
                     </span>
                     <span
                         style={{
