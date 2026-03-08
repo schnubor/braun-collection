@@ -553,6 +553,32 @@ export const collection: Device[] = [
         images: ["/hld6/1.webp", "/hld6/2.webp", "/hld6/3.webp"],
     },
     {
+        id: "tonarmwaage",
+        name: "Tonarmwaage",
+        model: "Tonarmwaage",
+        year: 1966,
+        category: "audio",
+        designer: "Dieter Rams",
+        acquired: "2025-02-28",
+        acquiredFrom: "Private seller",
+        condition: "excellent",
+        description:
+            "The Braun Tonarmwaage is a precision stylus force gauge designed to measure the tracking weight of a turntable tonearm. A delicate instrument of pure function — a calibrated aluminium beam, a counterweight, and a scale reduced to the essentials. It embodies the same rigour Rams brought to every object: nothing added that is not required, nothing omitted that is.",
+        specs: [
+            { label: "Type", value: "Stylus Force Gauge" },
+            { label: "Year", value: "1966" },
+            { label: "Range", value: "0 – 3 g" },
+            { label: "Graduation", value: "0.05 g" },
+            { label: "Material", value: "Metal and ABS" },
+            { label: "Finish", value: "White ABS, Metal" },
+        ],
+        images: [
+            "/tonarmwaage/1.webp",
+            "/tonarmwaage/2.webp",
+            "/tonarmwaage/3.webp",
+        ],
+    },
+    {
         id: "m1010",
         name: "M 1010",
         model: "M 1010",
