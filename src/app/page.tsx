@@ -29,9 +29,9 @@ export default function HomePage() {
                         >
                             My personal collection of Braun objects, assembled
                             over the years out of a deep admiration for the work
-                            of the Braun Design. {collection.length} pieces —
-                            each chosen for its honesty of form and the clarity
-                            of its purpose.
+                            of the Braun Design team. {collection.length} pieces
+                            — each chosen for its honesty of form and the
+                            clarity of its purpose.
                         </p>
 
                         <div style={{ display: "flex", gap: 40 }}>
