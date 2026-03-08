@@ -38,7 +38,7 @@ export const collection: Device[] = [
         id: "audio-300",
         name: "Audio 300",
         model: "Audio 300",
-        year: 1962,
+        year: 1969,
         category: "audio",
         designer: "Dieter Rams",
         acquired: "2021-09-18",
@@ -48,7 +48,7 @@ export const collection: Device[] = [
             "The Braun Audio 300 is a compact hi-fi system that epitomises Rams' vision of 'less, but better'. Its clear, uncluttered face presents only what is necessary — no decoration, no excess. The system integrates a record player, radio tuner, and amplifier into a single unified form.",
         specs: [
             { label: "Type", value: "Integrated Hi-Fi System" },
-            { label: "Year", value: "1962" },
+            { label: "Year", value: "1969" },
             { label: "Output", value: "2 × 6 W" },
             { label: "FM Range", value: "87.5 – 108 MHz" },
             { label: "Dimensions", value: "540 × 310 × 200 mm" },
@@ -65,8 +65,8 @@ export const collection: Device[] = [
         year: 1968,
         category: "audio",
         designer: "Dieter Rams",
-        acquired: "2020-08-22",
-        acquiredFrom: "Berliner Antiquariat",
+        acquired: "2025-01-24",
+        acquiredFrom: "Private seller",
         condition: "good",
         description:
             "The T1000 CD is one of the most sophisticated portable shortwave receivers ever produced. Spanning frequencies from long wave to shortwave, it was designed for world travellers and broadcast professionals. Its systematic dial layout — a masterpiece of information design — became a reference point for generations of designers.",
@@ -93,7 +93,7 @@ export const collection: Device[] = [
         acquiredFrom: "Private seller",
         condition: "excellent",
         description:
-            "The Braun Mactron F 1 lighter is a perfect study in the reduction of form to its purest function. A single aluminium body, one ignition switch, one fuel window. Nothing more. The tactile quality of the brushed metal finish and the precise click of the mechanism make it one of the most satisfying objects Rams ever designed.",
+            "The Braun Mactron F1 lighter is a perfect study in the reduction of form to its purest function. A single aluminium body, one ignition switch, one fuel window. Nothing more. The tactile quality of the brushed metal finish and the precise click of the mechanism make it one of the most satisfying objects Rams ever designed.",
         specs: [
             { label: "Type", value: "Piezo Gas Lighter" },
             { label: "Year", value: "1971" },
@@ -142,8 +142,8 @@ export const collection: Device[] = [
         category: "fan",
         designer: "Jürgen Greubel",
         acquired: "2022-04-09",
-        acquiredFrom: "Vintage market, Hamburg",
-        condition: "good",
+        acquiredFrom: "Private seller",
+        condition: "excellent",
         description:
             "The Braun HL 70 is a desk fan of characteristic restraint. A yellow ABS cylinder, a single rotary speed control, and a transparent grille — nothing more. Where competitors offered decorative shells, Greubel proposed a tool whose form follows airflow with complete honesty. It sits on any surface as though it could not be otherwise.",
         specs: [
