@@ -553,6 +553,28 @@ export const collection: Device[] = [
         images: ["/hld6/1.webp", "/hld6/2.webp", "/hld6/3.webp"],
     },
     {
+        id: "mp50",
+        name: "MP 50",
+        model: "MP 50",
+        year: 1971,
+        category: "projector",
+        designer: "Dieter Rams",
+        acquired: "2024-09-14",
+        acquiredFrom: "eBay Germany",
+        condition: "excellent",
+        description:
+            "The Braun MP 50 is a carousel slide projector built around a circular 50-slide Multimag magazine. The form is entirely determined by its mechanism: a drum housing the optics sits on a square base, the whole thing carried by a chrome wire handle that doubles as a stand. Dieter Rams reduced the object to its essentials — white ABS, a single red indicator dot, and nothing else.",
+        specs: [
+            { label: "Type", value: "Carousel Slide Projector" },
+            { label: "Year", value: "1971" },
+            { label: "Magazine", value: "50-slide Multimag circular" },
+            { label: "Lens", value: "85 mm f/2.8" },
+            { label: "Lamp", value: "150 W halogen" },
+            { label: "Finish", value: "White ABS, chrome handle" },
+        ],
+        images: ["/mp50/1.webp", "/mp50/2.webp", "/mp50/3.webp"],
+    },
+    {
         id: "tonarmwaage",
         name: "Tonarmwaage",
         model: "Tonarmwaage",
